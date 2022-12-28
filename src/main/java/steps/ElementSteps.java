@@ -87,13 +87,11 @@ public class ElementSteps extends BaseSteps{
     }
 
     public String getProductName() {
-        String productName = productPage.getProductName().getText();
-        return productName;
+        return productPage.getProductName().getText();
     }
 
     public String getProductIMG() {
-        String productIMG = productPage.getProductIMG().getAttribute("src");
-        return productIMG;
+        return productPage.getProductIMG().getAttribute("src");
     }
 
     public String getProductPriceStr() {
@@ -103,8 +101,7 @@ public class ElementSteps extends BaseSteps{
 
     public int getProductPriceInt() {
         String strPrice = productPage.getProductPrice().getText().replaceAll("[^0-9]", "");
-        int price = Integer.parseInt(strPrice);
-        return price;
+        return Integer.parseInt(strPrice);
     }
 
     public String getProductDescription() {
@@ -113,8 +110,7 @@ public class ElementSteps extends BaseSteps{
     }
 
     public String getAddToCartBTN() {
-        String btnText = productPage.getAddToCartBtn().getText();
-        return btnText;
+        return productPage.getAddToCartBtn().getText();
     }
 
     public void clickAddToCartBTN() throws InterruptedException {
@@ -128,7 +124,7 @@ public class ElementSteps extends BaseSteps{
     }
     public void handleAlert(String alertHandling) {
         Alert alert = webDriver.switchTo().alert();
-        if (alertHandling == "accept"){
+        if (alertHandling.equals("accept")){
             alert.accept();
         }
         else {
@@ -152,8 +148,7 @@ public class ElementSteps extends BaseSteps{
     }
 
     public int getTotalCartPrice() {
-        int total = Integer.parseInt(cartPage.getTotalPriceField().getText());
-        return total;
+        return Integer.parseInt(cartPage.getTotalPriceField().getText());
     }
 
 }
