@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Demoblaze Tests">
+    <test verbose="2" name="AutomationBootCampProject">
+        <classes>
+            <class name="tests.CategoriesTests"/>
+            <class name="tests.CatalogTests"/>
+            <class name="tests.CartTests"/>
+
+        </classes>
+    </test>
+</suite>
